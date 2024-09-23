@@ -16,6 +16,12 @@ body {
 	margin: 0 auto;
 }
 
+@media screen and (max-width: 585px) {
+	body {
+		padding: 8px;
+	}
+}
+
 h1 {
 	font-size: 1.8rem;
 }
@@ -26,6 +32,7 @@ h1 {
 	padding: 32px;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
 
 .nav-links {
@@ -47,8 +54,8 @@ h1 {
 	border-radius: 15px;
 	padding: 4px;
 	position: fixed;
-	top: 100;
-	right: 64px;
+	top: 60px;
+	right: 70px;
 	z-index: 1001;
 	opacity: 0.9;
 }
@@ -77,31 +84,49 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+	.navbar {
+		padding: 0px;
+	}
+
 	.nav-links {
 		display: none;
 		flex-direction: column;
-		position: absolute;
-		top: 120px;
-		right: 90px;
+		position: fixed;
+		gap: 8px;
+		top: 90px;
+		right: 100px;
 		background-color: rgb(245, 245, 245);
-		width: 100px;
-		border-radius: 15px;
-		padding: 16px;
+		max-width: 100px;
+		border-radius: 16px;
+		padding: 8px;
 		overflow: hidden;
 		max-height: 0;
 		opacity: 0;
 		transition: max-height 0.5s ease, opacity 0.5s ease;
+		z-index: 1002;
 	}
 
 	.nav-links.show {
 		display: flex;
-		max-height: 500px;
+		max-height: 300px;
 		opacity: 0.9;
 		position: fixed;
 	}
 
 	.hamburger {
 		display: flex;
+	}
+}
+
+@media screen and (max-width: 585px) {
+	.hamburger {
+		top: 8px;
+		right: 8px;
+	}
+
+	.nav-links {
+		top: 40px;
+		right: 40px;
 	}
 }
 
@@ -126,6 +151,19 @@ main > img {
 	float: right;
 	margin-left: 32px;
 	margin-bottom: 8px;
+}
+
+@media screen and (max-width: 585px) {
+	main {
+		padding: 4px;
+	}
+	main img {
+		width: 150px;
+	}
+}
+
+main.hide {
+	display: none;
 }
 
 #projects {
@@ -223,6 +261,18 @@ main > img {
 	}
 }
 
+@media screen and (max-width: 585px) {
+	#projects ul {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+}
+
+#projects.hide {
+	display: none;
+}
+
 #skills {
 	display: flex;
 	flex-direction: column;
@@ -240,12 +290,23 @@ main > img {
 
 #skills > div > img {
 	width: 54px;
+	height: auto;
 }
 
 @media screen and (max-width: 760px) {
 	#skills div img {
 		width: 42px;
 	}
+}
+
+@media screen and (max-width: 585px) {
+	#skills > div > img {
+		width: 28px;
+	}
+}
+
+#skills.hide {
+	display: none;
 }
 
 #contact {
@@ -266,52 +327,6 @@ main > img {
 	display: flex;
 }
 
-@media screen and (max-width: 760px) {
-	#contact {
-	}
-}
-
-main.hide {
-	display: none;
-}
-
-#projects.hide {
-	display: none;
-}
-
-#skills.hide {
-	display: none;
-}
-
 footer {
 	text-align: center;
-}
-
-@media screen and (max-width: 585px) {
-	body {
-		padding: 8px;
-	}
-
-	.nav-links {
-		top: 60px;
-		right: 60px;
-	}
-
-	main {
-		padding: 4px;
-	}
-
-	main img {
-		width: 150px;
-	}
-
-	#projects ul {
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-	}
-
-	#skills > div > img {
-		width: 28px;
-	}
 }
