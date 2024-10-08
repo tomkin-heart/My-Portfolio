@@ -136,6 +136,15 @@ a {
 	font-weight: 600;
 }
 
+a:hover {
+	color: green;
+	text-decoration: none;
+}
+
+a:active {
+	opacity: 0.5;
+}
+
 main {
 	margin-bottom: 48px;
 	background-color: rgb(245, 245, 245);
@@ -222,13 +231,21 @@ main.hide {
 }
 
 #Responsive_Design > a {
-	color: rgb(30, 20, 225);
+	color: rgb(10, 70, 225);
 	font-size: 20px;
+}
+
+#Responsive_Design > a:hover {
+	color: rgb(30, 10, 225);
 }
 
 #Apple_Design > a {
 	color: rgb(146, 90, 220);
 	font-size: 18px;
+}
+
+#Apple_Design > a:hover {
+	color: darkorchid;
 }
 
 #Documentation > a {
@@ -237,21 +254,37 @@ main.hide {
 
 #Game > a {
 	color: rgb(238, 100, 218);
-	font-size: 26px;
+	font-size: 32px;
+}
+
+#Game > a:hover {
+	color: rgb(228, 10, 218);
 }
 
 #Design_System > a {
 	color: rgb(60, 179, 113);
-	font-size: 24px;
+	font-size: 26px;
+}
+
+#Design_System > a:hover {
+	color: rgb(20, 140, 113);
 }
 
 #Credit-Card-Checker > a {
 	color: rgb(255, 145, 0);
 }
 
+#Credit-Card-Checker > a:hover {
+	color: rgb(245, 105, 20);
+}
+
 #Other_Projects > a {
 	color: rgb(255, 99, 71);
 	font-size: 16px;
+}
+
+#Other_Projects > a:hover {
+	color: rgb(245, 60, 71);
 }
 
 @media screen and (max-width: 760px) {
